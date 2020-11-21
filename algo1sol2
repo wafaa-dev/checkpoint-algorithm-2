@@ -1,0 +1,35 @@
+/*(solution 2)*/
+ALGORITHM COMPARE-SETS 
+
+
+VAR 
+set1 : array of integer
+set2 : array of integer
+new_set : array of integer
+count: integer=1
+i: integer
+sum =0
+BEGIN
+
+read (set1)
+read (set2)
+new_set:= (set1)concat(set2) ;
+
+  FOR i=0  ; i< new_set.length   DO
+       IF (htab.lookup(new_set[i]) = TRUE) THEN
+           count := htab.get(new_set[i]);
+           htab.insert(new_set[i],count+1);
+       ELSE
+           htab.insert(new_set[i],1);
+       END_IF
+   END_FOR
+
+FOR i=0 ;i<htab.length DO
+IF count=1 THEN
+{sum =sum+htab[i]}
+ELSE
+sum =sum +0
+END_IF
+END_FOR
+write (sum)
+END

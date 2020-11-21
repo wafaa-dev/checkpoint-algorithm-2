@@ -1,0 +1,32 @@
+ALGORITHM COMPARE-SETS (solution 1)
+VAR 
+set1 : array of integer
+set2 : array of integer
+i, j  : integer
+sum : integer:=0
+final_sum
+BEGIN
+read (set1)
+read (set2)
+
+for i=0 , i<set1.length  i++ do
+{ for j=0 , j<set2.length J++ }
+if set1[i]=set2[j] then
+
+sum =sum+set1[i]
+end if
+end for 
+
+
+else 
+/* we compare the largest array to be sure of all elements*/
+for i=0 , i<set2.length  i++ do
+{ for j=0 , j<set1.length J++
+end for }
+if set2[i]=set1[j] then 
+sum =sum+set2[i]
+end if
+end for
+final_sum=sum * 2
+write(final_sum)
+END
